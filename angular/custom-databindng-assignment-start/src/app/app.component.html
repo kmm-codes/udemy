@@ -17,10 +17,12 @@
     </div>
   </div>
   <div class="row">
-    <app-game-control (numberEventEmitter)="onNumberIncremented($event)" (resetNumbersEventEmitter)="resetNumbers()"></app-game-control>
-    <div *ngFor="let number of numbers">
-      <app-odd *ngIf="number%2===1" [number]="number"></app-odd>
-      <app-even *ngIf="number%2===0" [number]="number"></app-even>
+    <div class="col-xs-12">
+      <app-game-control (numberEventEmitter)="onNumberIncremented($event)"
+        (resetNumbersEventEmitter)="resetNumbers()"></app-game-control>
+      <div *ngFor="let number of numbers">
+        <app-odd *ngIf="number%2===1" [number]="number"></app-odd>
+        <app-even *ngIf="number%2===0" [number]="number"></app-even>
+      </div>
     </div>
-
   </div>

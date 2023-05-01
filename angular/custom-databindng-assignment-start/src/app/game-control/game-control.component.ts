@@ -6,7 +6,6 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./game-control.component.css']
 })
 export class GameControlComponent {
-
   myNumber: number = 0;
   intervalRef:any;
   @Output() numberEventEmitter: EventEmitter<number> = new EventEmitter();
